@@ -1,14 +1,48 @@
 {
-    "users": [
-      {
-        "id":"2f24vvg",
-        "email": "test@test.com",
-        "password": "password" 
-      },
-      {
-        "id":"d1u9nq",
-        "email": "user2@example.com",
-        "password": "password"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "d9dc288e-b6ba-4002-949a-30d2ddf20b88",
+      "username": "stefanino@bello.com",
+      "password": "passwords",
+      "firstName": "stefanino",
+      "lastName": "bello"
+    },
+    {
+      "id": "f1d4d70b-29e7-49fb-bf61-805dddc9d547",
+      "username": "stefanino1@bello.com",
+      "password": "12345",
+      "firstName": "asdasdasdas",
+      "lastName": "sadasdasd"
+    },
+    {
+      "id": "238932e3-7bc8-4c6f-abf2-f72f21bd0562",
+      "username": "zio@bracco.com",
+      "password": "passwordb",
+      "firstName": "zio",
+      "lastName": "bracco"
+    },
+    {
+      "id": "d489aaf1-fa10-491d-83e1-2795cdf8cf09",
+      "username": "grande@gianpi.com",
+      "password": "passwordg",
+      "firstName": "grande",
+      "lastName": "pianpy"
+    }
+  ],
+  "customer": [
+    {
+      "id": "asd12asd1",
+      "username": "customer1@test.com",
+      "password": "password1",
+      "firtsName": "xxxxx",
+      "lastName": "yyyyy"
+    },
+    {
+      "id": "jkyf44sdf",
+      "username": "customer2@example.com",
+      "password": "password2",
+      "firtsName": "zzzzz",
+      "lastName": "hhhhh"
+    }
+  ]
+}
