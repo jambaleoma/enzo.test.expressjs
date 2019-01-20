@@ -1,4 +1,5 @@
-﻿const express = require('express');
+﻿require('rootpath')();
+const express = require('express');
 const app = express();
 const path = require('path');
 const uuid = require('uuid/v4')
@@ -11,7 +12,13 @@ const registerModule = require('./modules/register');
 const errorModule = require('./modules/error');
 const flash = require('connect-flash');
 
-// add & configure middleware
+const http = require('http');
+const cors = require('cors');
+
+const routes = require('./routes');
+
+var httpServer = http.createServer(app);
+app.use(cors());
 app.use(bodyParser.urlencoded({
     extended: false
 }))
@@ -36,6 +43,30 @@ app.use(loginModule.router)
 app.use(registerModule.router)
 app.use(errorModule.router)
 
+// Error Handling
+app.use(routes.errorHandler);
+
+app.get(/\/sdc\/.*/, routes.spaHandler);
+app.get('/maintainance', routes.spaHandler);
+app.get('/loginPCS', routes.pcsHandler);
+
+// create the Customer's LOGOUT routes
+app.get('/forms_O2C/logoff.fcc', (req, res) => {
+    console.log(req.body)
+    console.log('Inside GET /logout callback')
+    req.logout();
+    if (req.isAuthenticated()) {
+        res.send('NON HAI EFFETTUATO LA LOGOUT!')
+    } else {
+        res.send('USCITA EFFETTUATA CON SUCCESSO!')
+    }
+})
+
+/** INITIAL CONFIGURATION ENDPOINT */
+app.get('/init-config', routes.initConfigHandler);
+app.use(express.static('public'));
+// console.log("process.env", process.env);
+
 // create the Customer's Authentication routes
 app.get('/authrequired', (req, res) => {
     console.log('Inside GET /authrequired callback')
@@ -51,7 +82,7 @@ app.get('/authrequired', (req, res) => {
 app.get('/', (req, res) => {
     console.log('Inside the homepage callback')
     console.log(req.sessionID)
-    res.sendFile(path.resolve(__dirname, 'public/index.html'))
+    res.sendFile(path.resolve(__dirname, 'public/index2.html'))
 })
 
 // create the Customer's Profile routes
@@ -60,7 +91,7 @@ app.get('/customerProfile', (req, res) => {
     console.log(req.sessionID)
     console.log(req.isAuthenticated())
     if (req.isAuthenticated()) {
-        res.sendFile(path.resolve(__dirname, 'public/customerProfile.html'))
+        res.sendFile(path.resolve(__dirname, '../dist/public/customerProfile.html'))
     } else {
         res.redirect('/')
     }
@@ -70,10 +101,11 @@ app.get('/customerProfile', (req, res) => {
 app.get('/notLoggedUser', (req, res) => {
     console.log('Inside GET /notLoggedUser callback')
     console.log(req.sessionID)
-    res.sendFile(path.resolve(__dirname, 'public/notLoggedUser.html'))
+    res.sendFile(path.resolve(__dirname, '../dist/public/notLoggedUser.html'))
 })
 
-// tell the server what port to listen on
-app.listen(3000, () => {
-    console.log('Listening on localhost:3000')
-})
+// start server
+var port = process.env.NODE_ENV === 'production' ? 3000 : 3000;
+httpServer.listen(port, function () {
+    console.log(new Date() + ' - ' + 'Server listening on port ' + port);
+});
