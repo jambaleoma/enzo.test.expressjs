@@ -82,7 +82,7 @@ app.get('/authrequired', (req, res) => {
 app.get('/', (req, res) => {
     console.log('Inside the homepage callback')
     console.log(req.sessionID)
-    res.sendFile(path.resolve(__dirname, 'public/index2.html'))
+    res.sendFile(path.resolve(__dirname, './public/index2.html'))
 })
 
 // create the Customer's Profile routes
@@ -91,7 +91,7 @@ app.get('/customerProfile', (req, res) => {
     console.log(req.sessionID)
     console.log(req.isAuthenticated())
     if (req.isAuthenticated()) {
-        res.sendFile(path.resolve(__dirname, '../dist/public/customerProfile.html'))
+        res.sendFile(path.resolve(__dirname, './public/customerProfile.html'))
     } else {
         res.redirect('/')
     }
@@ -101,7 +101,7 @@ app.get('/customerProfile', (req, res) => {
 app.get('/notLoggedUser', (req, res) => {
     console.log('Inside GET /notLoggedUser callback')
     console.log(req.sessionID)
-    res.sendFile(path.resolve(__dirname, '../dist/public/notLoggedUser.html'))
+    res.sendFile(path.resolve(__dirname, './public/notLoggedUser.html'))
 })
 
 // start server
