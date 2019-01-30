@@ -11,6 +11,10 @@ const loginModule = require('./modules/login');
 const registerModule = require('./modules/register');
 const errorModule = require('./modules/error');
 const flash = require('connect-flash');
+const fs = require('fs');
+const htmlPage = fs.readFileSync('public/index.html', {
+    encoding: 'utf8'
+});
 
 const http = require('http');
 const cors = require('cors');
@@ -54,6 +58,9 @@ app.get('/loginPCS', routes.pcsHandler);
 app.get('/forms_O2C/logoff.fcc', (req, res) => {
     console.log(req.body)
     console.log('Inside GET /logout callback')
+    var regex2 = new RegExp('{{.+}}');
+    const htmlBody = htmlPage.replace(regex2, '{{ID_NOT_LOGGED}}');
+    fs.writeFileSync('public/index.html', htmlBody);
     req.logout();
     if (req.isAuthenticated()) {
         res.send('NON HAI EFFETTUATO LA LOGOUT!')
