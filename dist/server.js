@@ -7,6 +7,7 @@ const session = require('express-session')
 const FileStore = require('session-file-store')(session);
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const homeModule = require('./modules/home')
 const loginModule = require('./modules/login');
 const registerModule = require('./modules/register');
 const errorModule = require('./modules/error');
@@ -46,6 +47,7 @@ app.use(flash());
 app.use(loginModule.router)
 app.use(registerModule.router)
 app.use(errorModule.router)
+app.use(homeModule.router)
 
 // Error Handling
 app.use(routes.errorHandler);

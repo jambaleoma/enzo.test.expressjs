@@ -14,19 +14,37 @@
 
 <body>
 
+    <img src="./image/timLogo.png" class="rounded float-left" alt="logo-tim">
+    <img src="./image/timLogo.png" class="rounded float-right" alt="logo-tim">
+
     <div style="text-align: center">
         <h1>HOME PAGE</h1>
     </div>
 
-    <div style="text-align: center; padding-top: 10em">
+    <!-- <div style="text-align: center; padding-top: 10em">
         <input type="button" class="btn btn-success" onclick="location.href='http://localhost:3000/login';" value="Login" />
 
         <input type="button" class="btn btn-primary" onclick="location.href='http://localhost:3000/register';" value="Register Here" />
-    </div>
-
-    <!-- <div style="text-align: center; padding-top: 10em">
-        <input type="button" class="btn btn-outline-danger" onclick="location.href='http://localhost:3000/customerProfile';" value="Entra" />
     </div> -->
+
+    <div class="container" style="padding-top: 5em">
+        <div class="row">
+            <div class="col">
+                <div style="text-align: center">
+                    <form method="GET" action="/login">
+                        <button type="submit" class="btn btn-success btn-lg btn-block">Login</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+                <div style="text-align: center">
+                    <form method="GET" action="/register">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Registrati Qui!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

@@ -14,8 +14,20 @@
 
 <body>
 
-    <div style="text-align: center">
-        <h1>SURROGATO PCS AUTHENTICATION</h1>
+    <img src="./image/timLogo.png" class="rounded float-left" alt="logo-tim">
+
+    <div class="rounded float-right">
+        <form method="GET" action="/home">
+            <button type="submit" class="btn btn-success">HOME</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col" style="text-align: center">
+                <h1>SURROGATO PCS AUTHENTICATION</h1>
+            </div>
+        </div>
     </div>
 
     <div class="card text-center" style="width: 70%; margin-left: 15%; margin-top: 2em;">
@@ -36,9 +48,22 @@
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Accedi</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Accedi</button>
                 </form>
             </p>
+        </div>
+        <div class="card-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div style="text-align: center">
+                            <form method="GET" action="/register">
+                                <button type="submit" class="btn btn-success">Registrati Qui!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
