@@ -2,31 +2,24 @@
   "users": [
     {
       "id": "d9dc288e-b6ba-4002-949a-30d2ddf20b88",
-      "username": "stefanino@bello.com",
-      "password": "passwords",
+      "username": "X1015507",
+      "password": "X1015507",
       "firstName": "stefanino",
       "lastName": "bello"
     },
     {
       "id": "f1d4d70b-29e7-49fb-bf61-805dddc9d547",
-      "username": "stefanino1@bello.com",
-      "password": "12345",
-      "firstName": "asdasdasdas",
-      "lastName": "sadasdasd"
+      "username": "X1015502",
+      "password": "X1015502",
+      "firstName": "vincenzino",
+      "lastName": "bellissimo"
     },
     {
       "id": "238932e3-7bc8-4c6f-abf2-f72f21bd0562",
-      "username": "zio@bracco.com",
-      "password": "passwordb",
-      "firstName": "zio",
-      "lastName": "bracco"
-    },
-    {
-      "id": "d489aaf1-fa10-491d-83e1-2795cdf8cf09",
-      "username": "grande@gianpi.com",
-      "password": "passwordg",
-      "firstName": "grande",
-      "lastName": "pianpy"
+      "username": "X1015503",
+      "password": "X1015503",
+      "firstName": "pamelina",
+      "lastName": "bruttina"
     }
   ],
   "customer": [
