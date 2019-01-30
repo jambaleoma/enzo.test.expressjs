@@ -12,7 +12,7 @@ function pcsHandler(req, response) {
     const htmlBody = htmlPage.replace(regex2, '{{ID_NOT_LOGGED}}');
     fs.writeFileSync('public/index.html', htmlBody);
     /* check PCS */
-    let employeeId = req.user.id;
+    let employeeId = req.user.username;
     let firstName = req.user.firstName;
     let lastName = req.user.lastName;
 
