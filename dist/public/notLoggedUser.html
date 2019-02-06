@@ -14,13 +14,31 @@
 
 <body>
 
-    <h1>Attenzione</h1>
+    <img src="./image/timLogo.png" class="rounded float-left" alt="logo-tim">
+    <img src="./image/timLogo.png" class="rounded float-right" alt="logo-tim">
 
-    <h2>Errore Nell'Autenticazione Dell'Utente</h2>
+    <div style="text-align: center">
+        <h1>Attenzione</h1>
 
-    <h4>Credenziali non valide!</h4>
+        <h2>Errore nell'autenticazione dell'utente</h2>
 
-    <input type="button" onclick="location.href='http://localhost:3000/login';" value="Torna Alla Pagina Di Login" />
+        <h4>Credenziali non valide!</h4>
+
+        <div class="container" style="padding-top: 5em">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <div style="text-align: center">
+                        <form method="GET" action="/login">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Torna Alla Pagina Di Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 

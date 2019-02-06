@@ -1,1 +1,7 @@
-module.exports = {router: require('./router'), controller: require('./controller')}
+module.exports = ({bucket}) => {
+
+    const controller = require('./controller').createLoginController({bucket})
+    const router = require('./router').createLoginRouter({controller})
+    return { router, controller }
+    
+}
