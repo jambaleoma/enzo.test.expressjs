@@ -32,7 +32,7 @@ const createUser = (req, res) => {
                         const CBresult = "stored document successfully. CAS is " + result.cas;
                         console.log(CBresult);
                         console.log('Correct Registration')
-                        return res.send('Registrazione Effettuata con Successo!');
+                        return res.sendFile(path.resolve(__dirname, '../../public/registerNewCustomer.html'));
                     } else {
                         console.error("Couldn't store document: ", err);
                         reject(err);
