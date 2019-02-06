@@ -33,7 +33,7 @@ const createUser = (req, res) => {
                 const registeredUser = resPost.data[0]
                 console.log(registeredUser)
                 console.log('Correct Registration')
-                return res.send('Registrazione Effettuata con Successo!');
+                return res.sendFile(path.resolve(__dirname, '../../public/registerNewCustomer.html'));
             }).catch(error => {
                 console.log(error)
                 return res.send('Errore durante l\'inserimento sul DB');

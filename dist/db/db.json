@@ -20,22 +20,20 @@
       "password": "X1015503",
       "firstName": "pamelina",
       "lastName": "bruttina"
-    }
-  ],
-  "customer": [
-    {
-      "id": "asd12asd1",
-      "username": "customer1@test.com",
-      "password": "password1",
-      "firtsName": "xxxxx",
-      "lastName": "yyyyy"
     },
     {
-      "id": "jkyf44sdf",
-      "username": "customer2@example.com",
-      "password": "password2",
-      "firtsName": "zzzzz",
-      "lastName": "hhhhh"
+      "id": "38da9528-bf37-4ef1-8f0b-d682f0182b10",
+      "username": "X1022794",
+      "password": "X1022794",
+      "firstName": "Barbara",
+      "lastName": "Paternicò"
+    },
+    {
+      "id": "e4a931d2-aa62-4ca6-8b06-639548c5078e",
+      "username": "X0186914",
+      "password": "X0186914",
+      "firstName": "Andrea",
+      "lastName": "Tripodi"
     }
   ]
 }
