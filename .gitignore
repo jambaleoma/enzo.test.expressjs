@@ -11,4 +11,3 @@ haxm_silent_run.log
 # System Files
 .DS_Store
 Thumbs.db
-*.sh
