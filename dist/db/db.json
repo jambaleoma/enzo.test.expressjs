@@ -34,6 +34,20 @@
       "password": "X0186914",
       "firstName": "Andrea",
       "lastName": "Tripodi"
+    },
+    {
+      "id": "1410ded9-85a5-4001-b607-51304ba71a14",
+      "username": "X1026608",
+      "password": "X1026608",
+      "firstName": "Antonio",
+      "lastName": "Sergi"
+    },
+    {
+      "id": "03b2774e-2766-413b-b7b7-7c4849162c53",
+      "username": "16003093",
+      "password": "16003093",
+      "firstName": "Alessandro",
+      "lastName": "Tari"
     }
   ]
 }
